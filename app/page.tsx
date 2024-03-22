@@ -44,7 +44,7 @@ export default function Page() {
             src="/hero-desktop.png"
             width={1000}
             height={760}
-            className="hidden md:block"
+            className="hidden md:block"//网页端和移动端的切换
             
             alt="Screenshots of the dashboard project showing desktop version"
 

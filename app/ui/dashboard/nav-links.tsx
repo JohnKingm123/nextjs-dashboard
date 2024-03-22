@@ -1,4 +1,4 @@
-'use client';
+'use client';//UI文件当中都是功能组件，这里的组件是  home invoices customers的三个导航处的按钮
 
 import {
   UserGroupIcon,
@@ -37,7 +37,7 @@ export default function NavLinks() {
               'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
               {
                 'bg-sky-100 text-blue-600': pathname === link.href,
-              },//选中，链接“按下”状态，原理是通过引用选中状态的
+              },//选中，链接“按下”状态，链接被调用的时候应用clsx的样式
             )}
           >
             <LinkIcon className="w-6" />

@@ -10,6 +10,8 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
+
+
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
@@ -227,5 +229,17 @@ export async function getUser(email: string) {
   } catch (error) {
     console.error('Failed to fetch user:', error);
     throw new Error('Failed to fetch user.');
+  }
+}
+
+export async function GET_ALL_CUSTOMERS(){
+  try{
+    const ALL_USER_TABLE = await sql `SELECT * FROM customers`;
+
+
+  }catch(error){
+    console.error('Failed to fetch customers:', error);
+    throw new Error(`Failed to fetch customers`);
+
   }
 }
